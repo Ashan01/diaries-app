@@ -1,15 +1,10 @@
-import React, { FC, lazy, Suspense } from "react";
+import React from "react";
 
-const App: FC = () => {
-   const isLoggedIn = useSelector((state: RootState) => state.auth.isAuthenticated);
+const App = () => {
    return (
-      <Router>
-         <Switch>
-            <Route path="/">
-               <Suspense fallback={<p>Loading...</p>}>{isLoggedIn ? <Home /> : <Auth />}</Suspense>
-            </Route>
-         </Switch>
-      </Router>
+      <>
+         <h1>Hello World</h1>
+      </>
    );
 };
 
